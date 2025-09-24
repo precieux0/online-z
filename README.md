@@ -6,9 +6,9 @@
 
 **Assistant IA Multimodal Futuriste · ChatGPT-like · Mémoire Supabase**
 
-[![GitHub Issues](https://img.shields.io/github/issues/Yashasmonkeycoder/OnlineX-Chat-AI)](https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/Yashasmonkeycoder/OnlineX-Chat-AI)](https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI/stargazers)
-[![APK Download](https://img.shields.io/badge/Download-APK-brightgreen)](https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI/releases)
+[![GitHub Issues](https://img.shields.io/github/issues/precieux06/online-z)](https://github.com/precieux06/online-z/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/precieux06/online-z)](https://github.com/precieux06/online-z/stargazers)
+[![APK Download](https://img.shields.io/badge/Download-APK-brightgreen)](https://github.com/precieux06/online-z/releases)
 
 *L'avenir de la conversation IA, dans votre poche* 📱
 
@@ -43,7 +43,7 @@
 ## 🚀 Installation Rapide
 
 ### 📱 Téléchargement APK
-1. **Allez dans [Releases](https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI/releases)**
+1. **Allez dans [Releases](https://github.com/precieux06/online-z/releases)**
 2. **Téléchargez la dernière version APK**
 3. **Installez sur votre Android**
 4. **Profitez !** 🎉
@@ -51,8 +51,8 @@
 ### 🔨 Build Manuel
 ```bash
 # Cloner le projet
-git clone https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI.git
-cd OnlineX-Chat-AI
+git clone https://github.com/precieux06/online-z.git
+cd online-z
 
 # Installer les dépendances
 pip install -r requirements.txt
