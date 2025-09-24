@@ -1,0 +1,43 @@
+name: 🚀 Build Online X Chat AI APK
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build-android-apk:
+    name: 📱 Build Android APK
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🔍 Checkout Code
+      uses: actions/checkout@v4
+
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: 📦 Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y git autoconf automake libtool pkg-config zlib1g-dev
+        pip install buildozer
+
+    - name: 📝 Create Environment File
+      run: |
+        cat > .env << EOF
+        SUPABASE_URL=${{ secrets.SUPABASE_URL }}
+        SUPABASE_KEY=${{ secrets.SUPABASE_KEY }}
+        OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+        EOF
+
+    - name: 🏗️ Build APK
+      run: |
+        buildozer android debug
+
+    - name: 📤 Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: online-x-apk
+        path: bin/*.apk
