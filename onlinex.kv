@@ -1,0 +1,63 @@
+<NeuButton>:
+    canvas.before:
+        Color:
+            rgba: (0.2, 0.6, 1, 0.2) if self.state == 'normal' else (0.3, 0.7, 1, 0.4)
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [15,]
+        Color:
+            rgba: (0.2, 0.8, 1, 0.8)
+        Line:
+            rounded_rectangle: [self.x, self.y, self.width, self.height, 15]
+            width: 1.5
+
+<GlowingLabel>:
+    canvas.before:
+        Color:
+            rgba: (0.2, 0.8, 1, root.glow_intensity * 0.3)
+        Rectangle:
+            pos: self.center_x - self.texture_size[0]/2 - 10, self.center_y - self.texture_size[1]/2 - 5
+            size: self.texture_size[0] + 20, self.texture_size[1] + 10
+
+<ChatBubble>:
+    size_hint_y: None
+    height: max(self.message_text.texture_size[1] + 50, 70)
+    padding: [20, 15]
+    spacing: 5
+    
+    canvas.before:
+        Color:
+            rgba: (0.2, 0.5, 0.9, 0.9) if root.is_user else (0.3, 0.2, 0.5, 0.9)
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [25, 25, 5, 25] if root.is_user else [25, 25, 25, 5]
+        Color:
+            rgba: (0.2, 0.8, 1, 0.6) if root.is_user else (0.6, 0.3, 1, 0.6)
+        Line:
+            rounded_rectangle: [self.x, self.y, self.width, self.height, 25]
+            width: 1.2
+    
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 2
+        
+        Label:
+            id: self.message_text
+            text: root.message
+            text_size: self.width, None
+            size_hint_y: None
+            height: self.texture_size[1]
+            color: (1, 1, 1, 1)
+            halign: 'right' if root.is_user else 'left'
+            font_size: '15sp'
+            markup: True
+        
+        Label:
+            text: root.timestamp
+            size_hint_y: None
+            height: 15
+            color: (0.7, 0.7, 1, 0.6)
+            font_size: '10sp'
+            halign: 'right' if root.is_user else 'left'

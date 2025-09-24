@@ -1,0 +1,6 @@
+kivy==2.2.1
+openai==0.28.1
+supabase==1.0.3
+python-dotenv==1.0.0
+requests==2.31.0
+pillow==10.0.1

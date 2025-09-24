@@ -1,31 +1,61 @@
-# Réseau Social avec Supabase
+# 🚀 Online X Chat AI
 
-Un réseau social simple construit avec Next.js et Supabase.
+<div align="center">
 
-## Fonctionnalités
+![Online X Logo](assets/logo.png)
 
-- ✅ Authentification utilisateur
-- ✅ Création de posts
-- ✅ Système de likes
-- ✅ Commentaires
-- ✅ Profils utilisateurs
-- ✅ Messagerie en temps réel
+**Assistant IA Multimodal Futuriste · ChatGPT-like · Mémoire Supabase**
 
-## Installation
+[![GitHub Issues](https://img.shields.io/github/issues/Yashasmonkeycoder/OnlineX-Chat-AI)](https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/Yashasmonkeycoder/OnlineX-Chat-AI)](https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI/stargazers)
+[![APK Download](https://img.shields.io/badge/Download-APK-brightgreen)](https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI/releases)
 
-1. Clonez le projet
-2. `npm install`
-3. Copiez `.env.local.example` vers `.env.local`
-4. Remplissez les variables Supabase
-5. `npm run dev`
+*L'avenir de la conversation IA, dans votre poche* 📱
 
-## Déploiement sur Render
+</div>
 
-1. Connectez votre repository GitHub à Render
-2. Configurez les variables d'environnement dans Render
-3. Déployez !
+## ✨ Fonctionnalités
 
-## Variables d'environnement
+### 🤖 **IA Multimodale Avancée**
+- 💬 **Chat Intelligent** avec GPT-4 Turbo
+- 🎨 **Génération d'Images** avec DALL-E 3
+- 🔍 **Analyse d'Images** avec GPT-4 Vision
+- 💾 **Mémoire Persistante** grâce à Supabase
 
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+### 🎯 **Interface Futuriste**
+- ✨ **Design Néo-morphique** avec effets de glow
+- 🎪 **Animations Fluides** et transitions élégantes
+- 🌙 **Thème Sombre** optimisé pour les yeux
+- 📱 **Interface Responsive** adaptée mobile
+
+### 🔧 **Fonctionnalités Techniques**
+- 💾 **Gestion des Sessions** multiples
+- 🔄 **Historique des Conversations** illimité
+- ⚡ **Build Automatique** via GitHub Actions
+- 🛡️ **Sécurisé** avec Row Level Security
+
+## 📸 Captures d'écran
+
+| Chat Principal | Génération d'Image | Gestion Sessions |
+|----------------|-------------------|------------------|
+| ![Chat](screenshots/chat.png) | ![Image](screenshots/image.png) | ![Sessions](screenshots/sessions.png) |
+
+## 🚀 Installation Rapide
+
+### 📱 Téléchargement APK
+1. **Allez dans [Releases](https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI/releases)**
+2. **Téléchargez la dernière version APK**
+3. **Installez sur votre Android**
+4. **Profitez !** 🎉
+
+### 🔨 Build Manuel
+```bash
+# Cloner le projet
+git clone https://github.com/Yashasmonkeycoder/OnlineX-Chat-AI.git
+cd OnlineX-Chat-AI
+
+# Installer les dépendances
+pip install -r requirements.txt
+
+# Lancer l'application
+python main.py
