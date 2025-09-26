@@ -14,20 +14,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Cache pip packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
-
-    - name: Cache Android SDK
-      uses: actions/cache@v3
-      with:
-        path: $HOME/Android/Sdk
-        key: ${{ runner.os }}-android-sdk
-
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -47,7 +33,6 @@ jobs:
         pip install buildozer
 
     - name: Install Android SDK & NDK
-      if: steps.cache-android-sdk.outputs.cache-hit != 'true'
       run: |
         mkdir -p $HOME/Android/Sdk
         cd $HOME/Android/Sdk
